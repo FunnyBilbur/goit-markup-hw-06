@@ -510,14 +510,14 @@
         <form class="contact-form" autocomplete="off">
           <label for="first_name" class="label-text">Имя</label>
           <div class="input-container">
-            <input class="input-field" type="text" name="first_name" id="first_name" />
+            <input class="input-field" type="text" name="first_name" id="first_name" required />
             <svg class="input-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-username"></use>
             </svg>
           </div>
           <label for="phone_number" class="label-text">Телефон</label>
           <div class="input-container">
-            <input class="input-field" type="tel" name="phone_number" id="phone_number" />
+            <input class="input-field" type="tel" name="phone_number" id="phone_number" required />
             <svg class="input-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-phone-2"></use>
             </svg>
@@ -525,7 +525,7 @@
 
           <label for="email-field" class="label-text">Почта</label>
           <div class="input-container">
-            <input class="input-field" type="email" name="email" id="email-field" />
+            <input class="input-field" type="email" name="email" id="email-field" required />
             <svg class="input-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email-2"></use>
             </svg>
@@ -539,24 +539,37 @@
             cols="30"
             rows="10"
             placeholder="Введите текст"
+            required
           ></textarea>
 
-          <div class="agreement-form">
+          <!-- Design of checkbox -->
+          <label class="agreement-form">
             <span class="checkbox-container">
-              <input type="checkbox" name="agreement" class="checkbox-agreement" />
+              <input class="checkbox-agreement" type="checkbox" name="agreement" required />
+              <svg class="checkbox-icon-checked" width="16" height="15">
+                <use href="./images/icons.svg#icon-checkbox"></use>
+              </svg>
+              <span class="checkbox-icon-unchecked"></span>
             </span>
+            <!--  -->
             <span class="checkbox-label"
               >Соглашаюсь с рассылкой и принимаю
               <a class="checkbox-label-link" href="" target="_blank" rel="noopener noreferrer"
                 >Условия договора</a
               >
             </span>
-          </div>
+          </label>
 
           <button class="submit-form-button" type="submit">Отправить</button>
         </form>
       </div>
     </div>
+    <script>
+      const { height: headerHeight } = document
+        .querySelector('.header-class')
+        .getBoundingClientRect();
+      document.body.style.paddingTop = `${headerHeight}px`;
+    </script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
