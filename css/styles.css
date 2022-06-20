@@ -521,6 +521,7 @@ p {
   background-color: var(--accent-color);
 }
 .footer-contacts-container {
+  flex-grow: 1;
   margin-right: 70px;
 }
 .footer-text {
@@ -539,6 +540,7 @@ p {
   display: flex;
 }
 .email-form {
+  background-color: transparent;
   padding: 15px 16px;
   width: 358px;
   height: 50px;
@@ -718,6 +720,7 @@ p {
   transform: translateY(0);
 }
 .backdrop {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -780,8 +783,8 @@ p {
 }
 
 .contact-form-text {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
   margin-bottom: 12px;
 
   font-size: 20px;
